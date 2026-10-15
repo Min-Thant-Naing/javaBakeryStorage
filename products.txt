@@ -1,3 +1,13 @@
-Croissant,15
+Croissant,40
+Chocolate Muffin,15
+Sourdough Bread,10
+Baguette,12
+Blueberry Tart,8
+Cinnamon Roll,20
+Cheesecake Slice,5
+White Bread,18
+Chocolate Chip Cookie,30
+Apple Pie,4
+Appleeeeeee Pie,0
 Chocolate Cake,5
 Bread,20

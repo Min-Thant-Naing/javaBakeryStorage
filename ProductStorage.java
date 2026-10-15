@@ -17,12 +17,12 @@ public class ProductStorage {
                     String[] parts = line.split(","); 
                     
                     String itemName = parts[0];
-                    // Changed to currentQuantity to avoid mixing up the names
                     int currentQuantity = Integer.parseInt(parts[1]); 
 
                     if (itemName.equals(name)) {
                         currentQuantity = currentQuantity + quantity;
                         
+                        // this is for the case when the quantity goes below 0, we set it to 0 instead of negative
                         if (currentQuantity < 0) {
                             currentQuantity = 0; 
                         }
@@ -34,13 +34,16 @@ public class ProductStorage {
                 scanner.close();
             }
 
+            // If the product was not found in the file, add it as a new entry
             if (!found) {
+                // it is optional. u can remove that if u want
                 if (quantity < 0) {
                     quantity = 0;
                 }
                 allProducts.add(name + "," + quantity);
             }
 
+            // save the updated list back to the file
             PrintWriter writer = new PrintWriter(file);
             for (String item : allProducts) {
                 writer.println(item);
@@ -71,9 +74,7 @@ public class ProductStorage {
                 String itemName = parts[0];
                 int currentQuantity = Integer.parseInt(parts[1]);
                 
-                if (currentQuantity > 0) {
-                    System.out.println(itemName + ": " + currentQuantity);
-                }
+                System.out.println(itemName + ": " + currentQuantity);
             }
             scanner.close();
             
