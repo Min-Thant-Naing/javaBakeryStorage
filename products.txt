@@ -1,0 +1,3 @@
+Croissant,15
+Chocolate Cake,5
+Bread,20
