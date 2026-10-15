@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-// hi hi hi
+
 public class ProductStorage {
     
     // quantity here is the amount you want to add (positive) or subtract (negative)
